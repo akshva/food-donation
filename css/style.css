@@ -1,0 +1,45 @@
+/* css/style.css */
+
+/* We remove the old 'body' rule. 
+  The 'bg-light' class in your PHP files will now handle the background color.
+*/
+
+/* We remove old .container, .header, .btn, .form, and .message rules 
+  because Bootstrap handles all of this styling now.
+*/
+
+/* We KEEP these custom status colors for the table */
+.status-available {
+    color: #198754; /* Bootstrap's "success" green */
+    font-weight: bold;
+}
+.status-claimed {
+    color: #0d6efd; /* Bootstrap's "primary" blue */
+    font-weight: bold;
+}
+.status-completed {
+    color: #6c757d; /* Bootstrap's "secondary" gray */
+    font-weight: bold;
+}
+
+
+/* --- FIX FOR INVISIBLE ICONS --- */
+/* This code goes at the BOTTOM of your file */
+
+i[class^="bi-"]::before,
+i[class*=" bi-"]::before {
+    /* This forces the browser to use the icon font */
+    font-family: 'bootstrap-icons' !important; 
+    
+    /* This ensures it renders as a font, not italics */
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Fixes rendering bugs */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
